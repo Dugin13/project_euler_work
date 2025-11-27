@@ -1,0 +1,14 @@
+C:\Users\Niels\Documents\code\projecteuler013\bin\Debug\net10.0\projecteuler013.exe
+C:\Users\Niels\Documents\code\projecteuler013\bin\Debug\net10.0\projecteuler013.deps.json
+C:\Users\Niels\Documents\code\projecteuler013\bin\Debug\net10.0\projecteuler013.runtimeconfig.json
+C:\Users\Niels\Documents\code\projecteuler013\bin\Debug\net10.0\projecteuler013.dll
+C:\Users\Niels\Documents\code\projecteuler013\bin\Debug\net10.0\projecteuler013.pdb
+C:\Users\Niels\Documents\code\projecteuler013\obj\Debug\net10.0\projecteuler013.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Niels\Documents\code\projecteuler013\obj\Debug\net10.0\projecteuler013.AssemblyInfoInputs.cache
+C:\Users\Niels\Documents\code\projecteuler013\obj\Debug\net10.0\projecteuler013.AssemblyInfo.cs
+C:\Users\Niels\Documents\code\projecteuler013\obj\Debug\net10.0\projecteuler013.csproj.CoreCompileInputs.cache
+C:\Users\Niels\Documents\code\projecteuler013\obj\Debug\net10.0\projecteuler013.dll
+C:\Users\Niels\Documents\code\projecteuler013\obj\Debug\net10.0\refint\projecteuler013.dll
+C:\Users\Niels\Documents\code\projecteuler013\obj\Debug\net10.0\projecteuler013.pdb
+C:\Users\Niels\Documents\code\projecteuler013\obj\Debug\net10.0\projecteuler013.genruntimeconfig.cache
+C:\Users\Niels\Documents\code\projecteuler013\obj\Debug\net10.0\ref\projecteuler013.dll

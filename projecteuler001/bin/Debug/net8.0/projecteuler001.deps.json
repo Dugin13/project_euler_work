@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "projecteuler001/1.0.0": {
+        "runtime": {
+          "projecteuler001.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "projecteuler001/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

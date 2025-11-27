@@ -1,0 +1,38 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run C# Console Project (Debug)",
+			"type": "shell",
+			"command": "dotnet run .",
+			"args": [
+				"--configuration",
+				"Debug"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run C# Console Project (Debug)",
+			"type": "shell",
+			"command": "dotnet run",
+			"args": [
+				"--configuration",
+				"Debug"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run C# Console Project (Debug)",
+			"type": "shell",
+			"command": "dotnet run",
+			"args": [
+				"--configuration",
+				"Debug"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

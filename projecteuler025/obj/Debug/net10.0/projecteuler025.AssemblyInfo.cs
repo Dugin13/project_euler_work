@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("projecteuler025")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d67f5b8ee344d702f91c2e428758cfa6548085db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ddfd4564361d082be97a191f7fea06376964ed5")]
 [assembly: System.Reflection.AssemblyProductAttribute("projecteuler025")]
 [assembly: System.Reflection.AssemblyTitleAttribute("projecteuler025")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

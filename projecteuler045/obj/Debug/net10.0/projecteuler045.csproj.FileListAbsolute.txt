@@ -1,0 +1,15 @@
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\bin\Debug\net10.0\projecteuler045.exe
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\bin\Debug\net10.0\projecteuler045.deps.json
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\bin\Debug\net10.0\projecteuler045.runtimeconfig.json
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\bin\Debug\net10.0\projecteuler045.dll
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\bin\Debug\net10.0\projecteuler045.pdb
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\obj\Debug\net10.0\projecteuler045.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\obj\Debug\net10.0\projecteuler045.AssemblyInfoInputs.cache
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\obj\Debug\net10.0\projecteuler045.AssemblyInfo.cs
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\obj\Debug\net10.0\projecteuler045.csproj.CoreCompileInputs.cache
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\obj\Debug\net10.0\projecteuler045.sourcelink.json
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\obj\Debug\net10.0\projecteuler045.dll
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\obj\Debug\net10.0\refint\projecteuler045.dll
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\obj\Debug\net10.0\projecteuler045.pdb
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\obj\Debug\net10.0\projecteuler045.genruntimeconfig.cache
+C:\Users\Niels\Documents\code\project_euler_work\projecteuler045\obj\Debug\net10.0\ref\projecteuler045.dll

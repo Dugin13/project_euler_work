@@ -10,7 +10,7 @@ namespace projecteuler061
         {
             Console.WriteLine("Solving Project Euler Problem 61: Cyclical figurate numbers");
             
-            // Generate all 4-digit figurate numbers for each type
+            // Generate all 4-digit figurate numbers for each type and store n mappings
             var triangular = GenerateFigurateNumbers(3);
             var square = GenerateFigurateNumbers(4);
             var pentagonal = GenerateFigurateNumbers(5);
@@ -25,14 +25,49 @@ namespace projecteuler061
             
             if (result != null)
             {
-                Console.WriteLine($"Cyclical chain found: {string.Join(" -> ", result)}");
+                Console.WriteLine($"\nCyclical chain found: {string.Join(" -> ", result)}");
                 Console.WriteLine($"Sum: {result.Sum()}");
+                
+                Console.WriteLine("\nShowing n values for each number in the chain:");
+                string[] typeNames = {"Triangular", "Square", "Pentagonal", "Hexagonal", "Heptagonal", "Octagonal"};
+                
+                for (int i = 0; i < chainWithTypes.Count; i++)
+                {
+                    var (number, type) = chainWithTypes[i];
+                    int n = FindNForNumber(number, type);
+                    string typeName = typeNames[type - 3];
+                    Console.WriteLine($"  {number} is {typeName} number with n={n}");
+                }
             }
             else
             {
                 Console.WriteLine("No cyclical chain found");
             }
         }
+        
+        static int FindNForNumber(int number, int type)
+        {
+            int n = 1;
+            while (true)
+            {
+                int calculatedNumber = type switch
+                {
+                    3 => n * (n + 1) / 2,           // Triangular
+                    4 => n * n,                     // Square
+                    5 => n * (3 * n - 1) / 2,      // Pentagonal
+                    6 => n * (2 * n - 1),          // Hexagonal
+                    7 => n * (5 * n - 3) / 2,      // Heptagonal
+                    8 => n * (3 * n - 2),          // Octagonal
+                    _ => 0
+                };
+                
+                if (calculatedNumber == number) return n;
+                if (calculatedNumber > number) return -1; // Not found
+                n++;
+            }
+        }
+        
+        static List<(int number, int type)> chainWithTypes = new List<(int, int)>();
         
         static List<int> FindCyclicalChain(List<HashSet<int>> sets, List<int> chain, bool[] used)
         {
@@ -59,6 +94,7 @@ namespace projecteuler061
                         chain.Last().ToString().Substring(2) == number.ToString().Substring(0, 2))
                     {
                         chain.Add(number);
+                        chainWithTypes.Add((number, setIndex + 3)); // Store type info
                         used[setIndex] = true;
                         
                         var result = FindCyclicalChain(sets, chain, used);
@@ -66,6 +102,7 @@ namespace projecteuler061
                         
                         // Backtrack
                         chain.RemoveAt(chain.Count - 1);
+                        chainWithTypes.RemoveAt(chainWithTypes.Count - 1);
                         used[setIndex] = false;
                     }
                 }

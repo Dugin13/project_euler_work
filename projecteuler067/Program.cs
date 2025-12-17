@@ -23,12 +23,12 @@ namespace projecteuler067
             DrawTrianglePyramid(triangle, maxRows: 100, filename: "triangle_pyramid.png");
             
             int[][] maxPathTriangle = MakePath(triangle);
-            var maxPathCoordinates = FindMaxPathCoordinates(triangle, maxPathTriangle);
-            int[] maxPath = FindMaxPath(triangle, maxPathTriangle);
+            int[] maxPathColumns = FindMaxPathCoordinates(triangle, maxPathTriangle);
+            int[] maxPath = FindMaxPath(triangle, maxPathColumns);
             
             // Create image with highlighted maximum path
-            DrawTrianglePyramid(triangle, maxRows: 100, filename: "triangle_with_path.png", pathCoordinates: maxPathCoordinates);
-            DrawTrianglePyramid(maxPathTriangle, filename: "max_path_triangle_pyramid.png", maxRows: 100, pathCoordinates: maxPathCoordinates);
+            DrawTrianglePyramid(triangle, maxRows: 100, filename: "triangle_with_path.png", pathColumns: maxPathColumns);
+            DrawTrianglePyramid(maxPathTriangle, filename: "max_path_triangle_pyramid.png", maxRows: 100, pathColumns: maxPathColumns);
             
             Console.WriteLine($"Maximum path: {string.Join(" -> ", maxPath)}");
             BigInteger sum = SumOfMaxPath(maxPath);
@@ -85,14 +85,14 @@ namespace projecteuler067
             }
             return sum;
         }
-        static (int row, int col)[] FindMaxPathCoordinates(int[][] triangle, int[][] path)
+        static int[] FindMaxPathCoordinates(int[][] triangle, int[][] path)
         {
             int rows = triangle.Length;
-            var result = new (int row, int col)[rows];
+            int[] result = new int[rows]; // result[row] = col
             int col = 0;
             for (int row = 0; row < rows; row++)
             {
-                result[row] = (row, col);
+                result[row] = col;
                 if (row < rows - 1)
                 {
                     if (path[row + 1][col] < path[row + 1][col + 1])
@@ -104,18 +104,17 @@ namespace projecteuler067
             return result;
         }
 
-        static int[] FindMaxPath(int[][] triangle, int[][] path)
+        static int[] FindMaxPath(int[][] triangle, int[] pathColumns)
         {
-            var coordinates = FindMaxPathCoordinates(triangle, path);
-            int[] result = new int[coordinates.Length];
-            for (int i = 0; i < coordinates.Length; i++)
+            int[] result = new int[pathColumns.Length];
+            for (int row = 0; row < pathColumns.Length; row++)
             {
-                result[i] = triangle[coordinates[i].row][coordinates[i].col];
+                result[row] = triangle[row][pathColumns[row]];
             }
             return result;
         }
 
-        static void DrawTrianglePyramid(int[][] triangle, int maxRows = 25, string filename = "triangle_pyramid.png", (int row, int col)[] pathCoordinates = null)
+        static void DrawTrianglePyramid(int[][] triangle, int maxRows = 25, string filename = "triangle_pyramid.png", int[] pathColumns = null)
         {
             Console.WriteLine($"\nCreating triangle pyramid image: {filename}");
             
@@ -148,9 +147,13 @@ namespace projecteuler067
                 
                 // Build path coordinates for highlighting
                 HashSet<(int row, int col)> pathCoords = null;
-                if (pathCoordinates != null)
+                if (pathColumns != null)
                 {
-                    pathCoords = new HashSet<(int row, int col)>(pathCoordinates);
+                    pathCoords = new HashSet<(int row, int col)>();
+                    for (int row = 0; row < Math.Min(pathColumns.Length, rowsToShow); row++)
+                    {
+                        pathCoords.Add((row, pathColumns[row]));
+                    }
                 }
                 
                 for (int row = 0; row < rowsToShow; row++)
